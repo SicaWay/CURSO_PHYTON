@@ -77,9 +77,14 @@ else:
 
 # Código:
 nivel_ameaca = 3
-if 
-
-
+if nivel_ameaca == 1 :
+    print ("Baixa: Adicionar ao Baclog da Sprint")
+elif nivel_ameaca == 2 :
+    print ("Média: Desenvolvedor deve revisar hoje.")
+elif nivel_ameaca == 3 :
+    print("Alta/Crítica: Acionar Mateus (DevSecOps) imediatiamente!")
+else:
+    print("Nível não reconhecido.")
 
 # ==============================================================================
 # DESAFIO 5: Menu de Ferramentas (Switch Case)
@@ -95,3 +100,13 @@ if
 # Caso Padrão (_): "Opção inválida. Tente novamente."
 
 # Código:
+opcao_menu = 2
+match opcao_menu:
+    case 1:
+        print("Iniciando varredura SAST no código fonte...")
+    case 2:
+        print("Iniciando processo de sanitização de metadados...")
+    case 3:
+        print("Gerando relatório OWASP de vulnerabilidades...")
+    case _:
+        print("Opção inválida. Tente novamente.")
