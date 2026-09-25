@@ -26,7 +26,10 @@
 # "Enviando mensagem via Whapi.Cloud para: [Nome]"
 
 # Código:
+novos_alunos = ["Ana", "Carlos", "Beatriz"]
 
+for aluno in novos_alunos:
+    print(f"Enviando mensagem via Whapi.Cloud para: {aluno}")
 
 # ==============================================================================
 # DESAFIO 2: Tentativas de Reconexão do Agente IA (Laço 'while')
@@ -39,6 +42,12 @@
 # Não se esqueça de incrementar a variável 'tentativas' para evitar um loop infinito!
 
 # Código:
+tentativas = 1
+
+while tentativas <=3:
+    print(f"Tentativa de conexão Dialogflow: {tentativas}")
+
+    tentativas += 1
 
 
 # ==============================================================================
@@ -52,6 +61,15 @@
 # Caso contrário, imprima "Intenção ignorada."
 
 # Código:
+intencoes = ["Duvida", "Matricula", "Reclamacao", "Matricula"]
+
+for intencao in intencoes:
+    if intencao == "Matricula":
+        print("Processando fluxo de matrícula no Make.com...")
+    else:
+        print("Intenção ignorada.")
+
+
 
 
 # ==============================================================================
