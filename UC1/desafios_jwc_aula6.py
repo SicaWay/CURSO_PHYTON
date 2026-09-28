@@ -84,6 +84,14 @@ for intencao in intencoes:
 # Se for "1", imprima "Chatbot iniciado!".
 
 # Código:
+while True:
+    opcao = input("Digite 1 para iniciar o chatbot ou 0 para sair: ")
+    
+    if opcao == "0":
+        print("Encerrando sistema...")
+        break
+    elif opcao == "1":
+        print("Chatbot iniciado!")
 
 
 # ==============================================================================
@@ -96,6 +104,10 @@ for intencao in intencoes:
 # Dica: range(inicio, parada, passo).
 
 # Código:
+for i in range(5, 0, -1):
+    print(i)
+
+print("Servidor reiniciado!")
 
 
 # ==============================================================================
@@ -115,7 +127,14 @@ for intencao in intencoes:
 # o loop imediatamente usando 'break'.
 
 # Código:
+status_msg = ["ok", "ok", "erro_critico", "ok"]
 
+for status in status_msg:
+    if status == "ok":
+        print("Mensagem lida")
+    elif status == "erro_critico":
+        print("Falha no sistema! Abortando fila.")
+        break
 
 # ==============================================================================
 # DESAFIO 7 (OPCIONAL): Pular Dados Inválidos ('continue')
@@ -127,7 +146,11 @@ for intencao in intencoes:
 # para pular para a próxima iteração. Caso contrário, imprima "Processando [Doc]".
 
 # Código:
-
+lista_docs = ["Doc1", "", "Doc3", "", "Doc5"]
+for doc in lista_docs:
+    if doc == "":
+        continue
+    print(f"Processando {doc}")
 
 # ==============================================================================
 # DESAFIO 8 (OPCIONAL): Calculadora de Custo de Tokens da API (While Acumulador)
@@ -139,3 +162,10 @@ for intencao in intencoes:
 # o limite de 1000 não for atingido. Imprima o total a cada iteração.
 
 # Código:
+total_tokens = 0
+tokens_por_requisicao = 250
+
+while total_tokens < 1000:
+    total_tokens += tokens_por_requisicao
+    print (f"Total d tokens: {total_tokens}")
+    
