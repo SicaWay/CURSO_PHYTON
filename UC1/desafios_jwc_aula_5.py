@@ -290,7 +290,11 @@ else:
 # Reescreva a verificação em um único 'if' usando o operador 'and' de forma limpa e idiomática.
 
 # Código:
+ativo = True
+admin = True
 
+if ativo and admin:
+    print("Acesso total")
 
 # ==============================================================================
 # DESAFIO 15 (OPCIONAL): O Desafio Supremo de Pipeline da Eduarda
@@ -307,3 +311,11 @@ else:
 # ou "Deploy bloqueado! Corrija os problemas apontados no relatório.".
 
 # Código:
+testes_passaram = True
+cobertura_codigo = 85
+vulnerabilidade_alta = False
+
+if testes_passaram and cobertura_codigo >=80 and not vulnerabilidade_alta:
+    print("Deploy aprovado pela Eduarda! Enviando para produção...")
+else:
+    print("Deploy bloqueado! Corrija os problemas apontados no relatório.")
