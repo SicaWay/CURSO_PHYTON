@@ -67,14 +67,14 @@ print(f"User1: {user1} | User2: {user2}")
 # ✍️ SEU TESTE DE MESA (Preencha as lacunas):
 #
 # 🔄 EVOLUÇÃO DAS VARIÁVEIS NA MEMÓRIA:
-#   - Linha 1 (user1 = 10)          -> user1 vale: ____ | user2 vale: ____
-#   - Linha 2 (user2 = 25)          -> user1 vale: ____ | user2 vale: ____
-#   - Linha 3 (user1 = user1 + user2)-> user1 vale: ____ | user2 vale: ____
-#   - Linha 4 (user2 = user1 - user2)-> user1 vale: ____ | user2 vale: ____
-#   - Linha 5 (user1 = user1 - user2)-> user1 vale: ____ | user2 vale: ____
+#   - Linha 1 (user1 = 10)          -> user1 vale: 10 | user2 vale: None
+#   - Linha 2 (user2 = 25)          -> user1 vale: 10 | user2 vale: 25
+#   - Linha 3 (user1 = user1 + user2)-> user1 vale: 35 | user2 vale: 25
+#   - Linha 4 (user2 = user1 - user2)-> user1 vale: 35 | user2 vale: 10
+#   - Linha 5 (user1 = user1 - user2)-> user1 vale: 25 | user2 vale: 10
 #
 # 🖥️ SAÍDA NA TELA DO MONITOR (O que o print imprime):
-#   ____________________________________________________
+#   User1 = 25 User2= 10
 
 
 # ==============================================================================
@@ -108,15 +108,16 @@ print(f"User1: {user1} | User2: {user2}")
 # ✍️ SEU TESTE DE MESA:
 #
 # 🔄 ESTADO DAS VARIÁVEIS ANTES DOS 'IFs':
-#   - status = "____"
-#   - tentativas = ____
-#   - bloqueado = ____ (Dica: O primeiro 'if tentativas >= 3' alterou essa variável?)
+#   - status = "inativo"
+#   - tentativas = 3
+#   - bloqueado = True (Dica: O primeiro 'if tentativas >= 3' alterou essa variável?)
 #
 # ❓ AVALIAÇÃO DAS CONDIÇÕES:
-#   - O 1º 'if' (status == "ativo" e não bloqueado) é Verdadeiro ou Falso? _______
-#   - O 2º 'elif' (status == "inativo" ou bloqueado) é Verdadeiro ou Falso? _____
+#   - O 1º 'if' (status == "ativo" e não bloqueado) é Verdadeiro ou Falso? Falso
+#   - O 2º 'elif' (status == "inativo" ou bloqueado) é Verdadeiro ou Falso? Verdadeiro
 #
 # 🖥️ SAÍDA NA TELA DO MONITOR:
+Acesso Negado: Conta retedida 
 #   ____________________________________________________
 
 
@@ -147,13 +148,14 @@ print(f"User1: {user1} | User2: {user2}")
 # ✍️ SEU TESTE DE MESA:
 #
 # 🔄 TELA DE RASTREAMENTO DO LAÇO (VOLTA POR VOLTA):
-#   - 1ª Volta -> qtd = 2 | É maior que 0? (Sim) | Novo total = 0 + (2 * 50) = ____
-#   - 2ª Volta -> qtd = 0 | É maior que 0? (___) | Novo total = ____
-#   - 3ª Volta -> qtd = 4 | É maior que 0? (___) | Novo total = ____
-#   - 4ª Volta -> qtd = 1 | É maior que 0? (___) | Novo total = ____
+#   - 1ª Volta -> qtd = 2 | É maior que 0? (Sim) | Novo total = 0 + (2 * 50) = 100
+#   - 2ª Volta -> qtd = 0 | É maior que 0? (Não) | Novo total = 100 + (0 *50) = 100
+#   - 3ª Volta -> qtd = 4 | É maior que 0? (Sim) | Novo total = 100 + (4 * 50) = 100 + 200 = 300
+#   - 4ª Volta -> qtd = 1 | É maior que 0? (Sim) | Novo total = 300 + (1 * 50) = 300 + (1 * 50) = 350
 #
 # 🖥️ SAÍDA NA TELA DO MONITOR:
-#   ____________________________________________________
+
+#   Faturamento: R$ 350
 
 
 # ==============================================================================
