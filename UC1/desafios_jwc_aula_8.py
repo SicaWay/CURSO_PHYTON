@@ -65,12 +65,13 @@
 # ✍️ SEU TESTE DE MESA (Preencha as lacunas):
 #
 # 🔄 RASTREAMENTO DOS PARÂMETROS:
-# - Quando a função é chamada, o parâmetro 'nome' recebe: "____"
-# - O parâmetro 'vaga' recebe: "____"
-# - A variável interna 'mensagem' passa a valer: "_________________________"
+# - Quando a função é chamada, o parâmetro 'nome' recebe: "Ana"
+# - O parâmetro 'vaga' recebe: "Full Stack"
+# - A variável interna 'mensagem' passa a valer: "Olá Ana, você avançou na vaga de Full Stack!"
 #
 # 🖥️ SAÍDA NA TELA DO MONITOR (O que o print imprime):
-# ____________________________________________________
+# Olá Ana, você avançou na vaga de Full Stack!
+
 # ==============================================================================
 # DESAFIO 2: Cálculo de Bônus (Entendendo o 'return')[span_10](start_span)[span_10](end_span)
 # ==============================================================================
@@ -94,16 +95,17 @@
 # ✍️ SEU TESTE DE MESA:
 #
 # 🔄 RASTREAMENTO DA FUNÇÃO:
-# - Parâmetro 'salario' = ____ | Parâmetro 'percentual' = ____
-# - Cálculo interno: valor_bonus = ____ * (____ / 100) = ____
-# - O comando 'return' devolve o valor: ____
+# - Parâmetro 'salario' = 5000 | Parâmetro 'percentual' = 10
+# - Cálculo interno: valor_bonus = 5000 * (10 / 100) = 500
+# - O comando 'return' devolve o valor: 500
 #
 # 🔄 DE VOLTA AO CÓDIGO PRINCIPAL:
-# - A variável 'bonus_recebido' armazena o retorno, logo vale: ____
-# - A variável 'salario_final' = 5000 + ____ = ____
+# - A variável 'bonus_recebido' armazena o retorno, logo vale: 500
+# - A variável 'salario_final' = 5000 + 500 = 5500
 #
 # 🖥️ SAÍDA NA TELA DO MONITOR:
-# ____________________________________________________
+# Salário Final: R$ 5500
+
 # ==============================================================================
 # DESAFIO 3: Reutilização de Código (Chamadas Múltiplas)[span_13](start_span)[span_13](end_span)
 # ==============================================================================
@@ -130,14 +132,15 @@
 # ✍️ SEU TESTE DE MESA:
 #
 # 🔄 AVALIAÇÃO DAS CHAMADAS:
-# - 1ª Chamada (anos = 6): 6 >= 5? (Sim/Não) ____ | Retorna: "________"
-# - 2ª Chamada (anos = 1): 1 >= 5? (___) | 1 >= 2? (___) | Retorna: "________"
-# - 3ª Chamada (anos = 3): 3 >= 5? (___) | 3 >= 2? (___) | Retorna: "________"
+# - 1ª Chamada (anos = 6): 6 >= 5? (Sim/Não) Sim | Retorna: "Sênior"
+# - 2ª Chamada (anos = 1): 1 >= 5? (Não) | 1 >= 2? (Não) | Retorna: "Júnior"
+# - 3ª Chamada (anos = 3): 3 >= 5? (Não) | 3 >= 2? (Sim) | Retorna: "Pleno"
 #
 # 🖥️ SAÍDA FINAL NA TELA DO MONITOR:
-# 1. _________________________________________________
-# 2. _________________________________________________
-# 3. _________________________________________________
+# 1. Ana: Sênior
+# 2. Beto: Júnior
+# 3. Carlos: Pleno
+
 # ==============================================================================
 # DESAFIO 4: A Pegadinha do Escopo (Local vs Global)[span_16](start_span)[span_16](end_span)
 # ==============================================================================
@@ -162,16 +165,17 @@
 # ✍️ SEU TESTE DE MESA:
 #
 # 🔄 RASTREAMENTO DO ESCOPO:
-# - Variável GLOBAL 'nota' inicial = ____
-# - A função é chamada. O parâmetro LOCAL 'nota' recebe o valor: ____
-# - Dentro da função, a nota LOCAL vira ____ + 20 = ____
-# - O primeiro print (dentro da função) exibe: ___________________________
+# - Variável GLOBAL 'nota' inicial = 50
+# - A função é chamada. O parâmetro LOCAL 'nota' recebe o valor: 50
+# - Dentro da função, a nota LOCAL vira 50 + 20 = 70
+# - O primeiro print (dentro da função) exibe: Nota dentro da função: 70
 # - A função termina. A variável LOCAL é destruída da memória!
-# - De volta ao código principal, a variável GLOBAL 'nota' ainda vale: ____
+# - De volta ao código principal, a variável GLOBAL 'nota' ainda vale: 50
 #
 # 🖥️ SAÍDA NA TELA DO MONITOR (Escreva as duas linhas que vão aparecer):
-# _________________________________________________
-# _________________________________________________
+# Nota dentro da função: 70
+# Nota fora da função: 50
+
 # ==============================================================================
 # DESAFIO 5: Funções que chamam Funções (Modularização)[span_19](start_span)[span_19](end_span)[span_20](start_span)[span_20](end_span)
 # ==============================================================================
@@ -202,14 +206,14 @@
 # 🔄 PASSO A PASSO DO FLUXO DE EXECUÇÃO:
 # - 1. O código chama 'calcular_preco' passando os parâmetros (500, "Parceiro").
 # - 2. Dentro de 'calcular_preco', o 'if' invoca a função 'tem_desconto("Parceiro")'.
-# - 3. Entra em 'tem_desconto'. O tipo é "Parceiro"? (Sim/Não) ____
-# - 4. A função 'tem_desconto' devolve o retorno: (True/False) ________
+# - 3. Entra em 'tem_desconto'. O tipo é "Parceiro"? (Sim/Não) Sim
+# - 4. A função 'tem_desconto' devolve o retorno: (True/False) True
 # - 5. De volta ao 'if' de 'calcular_preco', a condição é Verdadeira!
-# - 6. Retorna preco_base (____) - 100 = ____
-# - 7. A variável 'preco_final' recebe o valor: ____
+# - 6. Retorna preco_base (500) - 100 = 400
+# - 7. A variável 'preco_final' recebe o valor: 400
 #
 # 🖥️ SAÍDA EXATA NA TELA DO MONITOR:
-# ____________________________________________________________________
+# Preço cobrado: R$ 400
 # ==============================================================================
 # ==============================================================================
 # DESAFIO OPCIONAL (PARA ALUNOS QUE QUEREM IR ALÉM)
@@ -232,6 +236,6 @@
 # ✍️ SEU TESTE DE MESA:
 #
 # 🔄 AVALIAÇÃO DAS CHAMADAS:
-# - Chamada 1: nome="Carlos", nivel enviado="Pleno". Imprime: _________________
-# - Chamada 2: nome="Marina", nivel enviado=Nenhum. Usa o padrão: "_______".
-#              Imprime: _______________________________________________________
+# - Chamada 1: nome="Carlos", nivel enviado="Pleno". Imprime: Dev: Carlos / Nível: Pleno
+# - Chamada 2: nome="Marina", nivel enviado=Nenhum. Usa o padrão: "Júnior".
+#              Imprime: Dev: Marina / Nível: Júnior
