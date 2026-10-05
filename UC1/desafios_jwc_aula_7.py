@@ -117,8 +117,7 @@ print(f"User1: {user1} | User2: {user2}")
 #   - O 2º 'elif' (status == "inativo" ou bloqueado) é Verdadeiro ou Falso? Verdadeiro
 #
 # 🖥️ SAÍDA NA TELA DO MONITOR:
-Acesso Negado: Conta retedida 
-#   ____________________________________________________
+#   Acesso Negado: Conta retedida 
 
 
 # ==============================================================================
@@ -188,28 +187,28 @@ Acesso Negado: Conta retedida
 #   - Início: registros = 25 | pagina = 1
 #
 #   • Volta 1:
-#       - O 'print' mostra: "Buscando página ____"
-#       - Novo registros (25 - 10) = ____
-#       - Nova pagina (1 + 1) = ____
-#       - Teste do while: registros (___) > 0? (Sim/Não) ____
+#       - O 'print' mostra: "Buscando página 1"
+#       - Novo registros (25 - 10) = 15
+#       - Nova pagina (1 + 1) = 2
+#       - Teste do while: registros (15) > 0? (Sim/Não) Sim
 #
 #   • Volta 2:
-#       - O 'print' mostra: "Buscando página ____"
-#       - Novo registros (___ - 10) = ____
-#       - Nova pagina (___ + 1) = ____
-#       - Teste do while: registros (___) > 0? (Sim/Não) ____
+#       - O 'print' mostra: "Buscando página 2"
+#       - Novo registros (15 - 10) = 5
+#       - Nova pagina (2 + 1) = 3
+#       - Teste do while: registros (5) > 0? (Sim/Não) Sim
 #
 #   • Volta 3:
-#       - O 'print' mostra: "Buscando página ____"
-#       - Novo registros (___ - 10) = ____
-#       - Nova pagina (___ + 1) = ____
-#       - Teste do while: registros (___) > 0? (Sim/Não) ____ (O loop para aqui!)
+#       - O 'print' mostra: "Buscando página 3"
+#       - Novo registros (5 - 10) = - 5
+#       - Nova pagina (- 5 + 1) = - 4
+#       - Teste do while: registros (- 5) > 0? (Sim/Não) Não (O loop para aqui!)
 #
 # 🖥️ SAÍDA FINAL NA TELA (Escreva todas as linhas que o monitor vai mostrar):
-#   1. _________________________________________________
-#   2. _________________________________________________
-#   3. _________________________________________________
-#   4. _________________________________________________
+#   1. Buscando página 1
+#   2. Buscando página 2
+#   3. Buscando página 3
+#   4. Fim da busca. Restante: -5
 
 
 # ==============================================================================
@@ -240,17 +239,16 @@ Acesso Negado: Conta retedida
 # ✍️ SEU TESTE DE MESA:
 #
 # 🔄 PASSO A PASSO DA LEITURA DA LISTA:
-#   - Item 1 ("ok"): O 'if' de alerta ignora? Sim. Imprime algo? _____________
-#   - Item 2 ("alerta"): O 'continue' é acionado? O que acontece? ____________
-#   - Item 3 ("ok"): Imprime algo? __________________________________________
-#   - Item 4 ("critico"): O 'break' é acionado? O que é impresso? ___________
-#   - Item 5 ("ok"): Chega a ser lido? Por quê? ______________________________
-#
-# 🖥️ SAÍDA EXATA NA TELA DO MONITOR:
-#   ____________________________________________________________________
-#   ____________________________________________________________________
-#   ____________________________________________________________________
+#   - Item 1 ("ok"): O 'if' de alerta ignora? Sim. Imprime algo? Servidor operando: ok
+#   - Item 2 ("alerta"): O 'continue' é acionado? Sim. O que acontece? O continuie é acionado, então o laço pula para a próxima iteração sem imprimir nada.
+#   - Item 3 ("ok"): Imprime algo? Servidor operando: ok
+#   - Item 4 ("critico"): O 'break' é acionado? Sim. O que é impresso? Servidor crítico encontrado! Interrompendo...
+#   - Item 5 ("ok"): Chega a ser lido? Por quê? Não, pois o laço foi encerrado imediatamente após o break no item anterior.
 
+# 🖥️ SAÍDA EXATA NA TELA DO MONITOR:
+#   Servidor operando: ok
+#   Servidor operando: ok
+#   Servidor crítico encontrado! Interrompendo...
 
 # ==============================================================================
 # ==============================================================================
@@ -284,8 +282,8 @@ Acesso Negado: Conta retedida
 # ✍️ SEU TESTE DE MESA:
 #
 # 🔄 AVALIAÇÃO DE CADA VALOR DE 'i':
-#   - i = 1 -> Qual condição entra? ______ | O que imprime? __________________
-#   - i = 2 -> Qual condição entra? ______ | O que imprime? __________________
-#   - i = 3 -> Qual condição entra? ______ | O que imprime? __________________
-#   - i = 4 -> Qual condição entra? ______ | O que imprime? __________________
-#   - i = 5 -> Qual condição entra? ______ | O que imprime? __________________
+#   - i = 1 -> Qual condição entra? else | O que imprime? Tráfego Normal
+#   - i = 2 -> Qual condição entra? elif (par) | O que imprime? Tráfego Par
+#   - i = 3 -> Qual condição entra? elif (múltiplo de 3) | O que imprime? Tráfego Múltiplo de 3
+#   - i = 4 -> Qual condição entra? elif (par) | O que imprime? Tráfego Par
+#   - i = 5 -> Qual condição entra? else | O que imprime? Tráfego Normal
