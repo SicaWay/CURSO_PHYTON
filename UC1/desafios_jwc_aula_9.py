@@ -105,17 +105,17 @@
 #
 # 🔄 RASTREAMENTO DOS PARÂMETROS:
 #
-# - Quando a função é chamada, o parâmetro 'produto' recebe: "__________"
+# - Quando a função é chamada, o parâmetro 'produto' recebe: "Teclado"
 #
-# - O parâmetro 'categoria' recebe: "________________"
+# - O parâmetro 'categoria' recebe: "Periféricos"
 #
 # - A variável interna 'mensagem' passa a valer:
 #
-#   "____________________________________________________________"
+#   "Produto: Teclado | Categoria: Periféricos"
 #
 # 🖥️ SAÍDA NA TELA DO MONITOR:
 #
-# ________________________________________________________________
+# Produto: Teclado | Categoria: Periféricos
 # ==============================================================================
 
 
@@ -151,22 +151,22 @@
 #
 # 🔄 RASTREAMENTO DA FUNÇÃO:
 #
-# - Parâmetro 'preco' = ______
-# - Parâmetro 'quantidade' = ______
+# - Parâmetro 'preco' = 80
+# - Parâmetro 'quantidade' = 4
 #
 # - Cálculo interno:
 #
-#   total = ______ * ______ = ______
+#   total = 80 * 4 = 320
 #
-# - O comando 'return' devolve o valor: ______
+# - O comando 'return' devolve o valor: 320
 #
 # 🔄 DE VOLTA AO CÓDIGO PRINCIPAL:
 #
-# - A variável 'valor_compra' armazena o retorno, logo vale: ______
+# - A variável 'valor_compra' armazena o retorno, logo vale: 320
 #
 # 🖥️ SAÍDA NA TELA DO MONITOR:
 #
-# ________________________________________________________________
+# Valor da compra: R$ 320 
 # ==============================================================================
 
 
@@ -211,28 +211,28 @@
 # - 1ª Chamada:
 #
 #   nota = 8
-#   8 >= 7? (Sim/Não) ____
-#   Retorna: "____________"
+#   8 >= 7? (Sim/Não) Sim
+#   Retorna: "Aprovado"
 #
 # - 2ª Chamada:
 #
 #   nota = 6
-#   6 >= 7? (Sim/Não) ____
-#   6 >= 5? (Sim/Não) ____
-#   Retorna: "____________"
+#   6 >= 7? (Sim/Não) Não
+#   6 >= 5? (Sim/Não) Sim
+#   Retorna: "Recuperação"
 #
 # - 3ª Chamada:
 #
 #   nota = 4
-#   4 >= 7? (Sim/Não) ____
-#   4 >= 5? (Sim/Não) ____
-#   Retorna: "____________"
+#   4 >= 7? (Sim/Não) Não
+#   4 >= 5? (Sim/Não) Não
+#   Retorna: "Reprovado"
 #
 # 🖥️ SAÍDA FINAL NA TELA DO MONITOR:
 #
-# 1. _________________________________________________
-# 2. _________________________________________________
-# 3. _________________________________________________
+# 1. Lucas, Aprovado
+# 2. Julia, Recuperação
+# 3. Pedro, Reprovado
 # ==============================================================================
 
 
@@ -269,17 +269,17 @@
 #
 # 🔄 RASTREAMENTO DO ESCOPO:
 #
-# - Variável GLOBAL 'mensagem' inicial = "____________"
+# - Variável GLOBAL 'mensagem' inicial = "Olá"
 #
 # - A função 'criar_mensagem()' é chamada.
 #
 # - Dentro da função, o parâmetro 'texto' recebe/cria:
 #
-#   "________________________________________"
+#   "Bem-vindo ao sistema!"
 #
 # - O primeiro print, dentro da função, exibe:
 #
-#   __________________________________________
+#   Bem-vindo ao sistema!
 #
 # - A função termina.
 #
@@ -295,13 +295,14 @@
 #
 #   (   ) O programa imprime o texto normalmente.
 #
-#   (   ) O programa apresenta um erro porque 'texto' não existe
+#   (X) O programa apresenta um erro porque 'texto' não existe
 #         no escopo global.
 #
 # 🖥️ SAÍDA / COMPORTAMENTO DO PROGRAMA:
 #
-# ________________________________________________________________
-# ________________________________________________________________
+# Bem-vindo ao sistema!
+# Olá!
+# NameError: name 'texto' is not defined
 # ==============================================================================
 
 
@@ -345,41 +346,41 @@
 #
 # - 1. O código chama 'calcular_preco_final' passando:
 #
-#   preco = ______
+#   preco = 200
 #
 # - 2. Dentro de 'calcular_preco_final', a função
 #   'calcular_desconto(preco)' é chamada.
 #
 # - 3. A função 'calcular_desconto' recebe:
 #
-#   preco = ______
+#   preco = 200
 #
 # - 4. O cálculo interno é:
 #
-#   desconto = ______ * 0.10 = ______
+#   desconto = 200 * 0.10 = 20.0
 #
 # - 5. A função 'calcular_desconto' devolve:
 #
-#   ______
+#   20.0
 #
 # - 6. A variável 'desconto', dentro de 'calcular_preco_final',
-#   recebe o valor: ______
+#   recebe o valor: 20.0
 #
 # - 7. A função calcula:
 #
-#   ______ - ______ = ______
+#   200 - 20.0 = 180.0
 #
 # - 8. O comando 'return' de 'calcular_preco_final' devolve:
 #
-#   ______
+#   180.0
 #
 # - 9. A variável 'preco_final' recebe:
 #
-#   ______
+#   180.0
 #
 # 🖥️ SAÍDA EXATA NA TELA DO MONITOR:
 #
-# ________________________________________________________________
+# Preço final: R$ 180.0
 # ==============================================================================
 
 
@@ -412,16 +413,16 @@
 #
 # 🔄 AVALIAÇÃO DAS CHAMADAS:
 #
-# - Chamada 1:
+# - Chamada 1: abrir_chamado("Rafael", "Alta")
 #
 #   usuario = "Rafael"
 #   prioridade enviada = "Alta"
 #
 #   Imprime:
-#
+#   Usuário: Rafael, Prioridade: Normal
 #   ______________________________________________________________
 #
-# - Chamada 2:
+# - Chamada 2: abrir_chamado("Camila")
 #
 #   usuario = "Camila"
 #   prioridade enviada = Nenhuma.
@@ -429,10 +430,10 @@
 #   Como nenhum valor foi enviado para 'prioridade', a função utiliza
 #   o valor padrão:
 #
-#   "____________"
+#   "Normal"
 #
 #   Imprime:
-#
+#   Usuário: Camila, Prioridade: Normal
 #   ______________________________________________________________
 # ==============================================================================
 
@@ -466,25 +467,25 @@
 #
 # 🔄 RASTREAMENTO DOS PARÂMETROS:
 #
-# - nota1 = ______
-# - nota2 = ______
-# - nota3 = ______
+# - nota1 = 7
+# - nota2 = 8
+# - nota3 = 10
 #
 # 🔄 CÁLCULO INTERNO:
 #
-# - soma = ______ + ______ + ______ = ______
+# - soma = 7 + 8 + 10 = 25
 #
-# - media = ______ / 3 = ______
+# - media = 25 / 3 = 8.333333333333334
 #
-# - O comando 'return' devolve: ______
+# - O comando 'return' devolve: 8.333333333333334
 #
 # 🔄 DE VOLTA AO PROGRAMA PRINCIPAL:
 #
-# - A variável 'resultado' recebe: ______
+# - A variável 'resultado' recebe: 8.333333333333334
 #
 # 🖥️ SAÍDA NA TELA DO MONITOR:
 #
-# ________________________________________________________________
+# Média: 8.333333333333334
 # ==============================================================================
 
 
@@ -523,26 +524,26 @@
 # - 1ª Chamada:
 #
 #   valor = 200
-#   200 >= 150? (Sim/Não) ______
-#   Retorna: "________________"
+#   200 >= 150? (Sim/Não) Sim
+#   Retorna: "Frete grátis"
 #
 # - 2ª Chamada:
 #
 #   valor = 100
-#   100 >= 150? (Sim/Não) ______
-#   Retorna: "________________"
+#   100 >= 150? (Sim/Não) 
+#   Retorna: "Frete grátis"
 #
 # - 3ª Chamada:
 #
 #   valor = 150
-#   150 >= 150? (Sim/Não) ______
-#   Retorna: "________________"
+#   150 >= 150? (Sim/Não) Não
+#   Retorna: "Frete pago"
 #
 # 🖥️ SAÍDA FINAL NA TELA DO MONITOR:
 #
-# 1. __________________________________________________________
-# 2. __________________________________________________________
-# 3. __________________________________________________________
+# 1. Compra 1: Frete grátis
+# 2. Compra 2: Frete Pago
+# 3. Compra 3: Frete grátis
 # ==============================================================================
 
 
@@ -584,39 +585,39 @@
 #
 # 🔄 PRIMEIRA FUNÇÃO - calcular_media():
 #
-# - nota1 = ______
-# - nota2 = ______
+# - nota1 = 8
+# - nota2 = 6
 #
 # - Cálculo:
 #
-#   (______ + ______) / 2 = ______
+#   (8 + 6) / 2 = 7
 #
-# - O return devolve: ______
+# - O return devolve: 7.0
 #
 # 🔄 DE VOLTA AO PROGRAMA PRINCIPAL:
 #
-# - A variável 'media_final' recebe: ______
+# - A variável 'media_final' recebe: 7.0
 #
 # 🔄 SEGUNDA FUNÇÃO - verificar_situacao():
 #
-# - O parâmetro 'media' recebe: ______
+# - O parâmetro 'media' recebe: 7.0
 #
-# - ______ >= 7? (Sim/Não) ______
+# - 7 >= 7? (Sim/Não) Sim
 #
 # - O return devolve:
 #
-#   "________________"
+#   "Aprovado"
 #
 # 🔄 DE VOLTA AO PROGRAMA PRINCIPAL:
 #
 # - A variável 'situacao' recebe:
 #
-#   "________________"
+#   "Aprovado"
 #
 # 🖥️ SAÍDA FINAL NA TELA DO MONITOR:
 #
-# Média final: __________________________________
-# Situação: _____________________________________
+# Média final: 7.0
+# Situação: Aprovado
 # ==============================================================================
 
 
@@ -653,29 +654,29 @@
 #
 # 🔄 RASTREAMENTO DA FUNÇÃO:
 #
-# - Parâmetro 'salario' = ______
-# - Parâmetro 'percentual' = ______
+# - Parâmetro 'salario' = 3500
+# - Parâmetro 'percentual' = 1000
 #
 # - Cálculo:
 #
-#   bonus = ______ * (______ / 100)
+#   bonus = 3500 * (8 / 100)
 #
-#   bonus = ______
+#   bonus = 280.0
 #
-# - O comando 'return' devolve: ______
+# - O comando 'return' devolve: 280.0
 #
 # 🔄 DE VOLTA AO PROGRAMA PRINCIPAL:
 #
-# - 'bonus_recebido' recebe: ______
+# - 'bonus_recebido' recebe: 280.0
 #
 # - 'salario_final' será:
 #
-#   ______ + ______ = ______
+#   3500 + 280.0 = 3780.0
 #
 # 🖥️ SAÍDA FINAL NA TELA DO MONITOR:
 #
-# Bônus: R$ ___________________________________
-# Salário final: R$ ____________________________
+# Bônus: R$ 280.0
+# Salário final: R$ 3780.0
 # ==============================================================================
 
 
@@ -724,43 +725,43 @@
 #
 # 🔄 1ª FUNÇÃO - calcular_subtotal():
 #
-# - preco = ______
-# - quantidade = ______
-# - Cálculo: ______ * ______ = ______
-# - return devolve: ______
+# - preco = 50
+# - quantidade = 4
+# - Cálculo: 50 * 4 = 200
+# - return devolve: 200
 #
 # 🔄 PROGRAMA PRINCIPAL:
 #
-# - 'subtotal' recebe: ______
+# - 'subtotal' recebe: 200
 #
 # 🔄 2ª FUNÇÃO - calcular_final():
 #
-# - 'subtotal' recebe: ______
+# - 'subtotal' recebe: 200
 #
 # - Dentro dela, 'calcular_desconto()' é chamada.
 #
-# - A função 'calcular_desconto()' recebe: ______
+# - A função 'calcular_desconto()' recebe: 200
 #
 # - Cálculo do desconto:
 #
-#   ______ * 0.10 = ______
+#   200 * 0.10 = 180.0
 #
-# - O desconto calculado é: ______
+# - O desconto calculado é: 180.0
 #
 # - Agora 'calcular_final()' realiza:
 #
-#   ______ - ______ = ______
+#   200 - 20.0 = 180.0
 #
-# - O return devolve: ______
+# - O return devolve: 180.0
 #
 # 🔄 PROGRAMA PRINCIPAL:
 #
-# - 'valor_final' recebe: ______
+# - 'valor_final' recebe: 180.0
 #
 # 🖥️ SAÍDA FINAL:
 #
-# Subtotal: R$ _________________________________
-# Valor final: R$ ______________________________
+# Subtotal: R$ 200
+# Valor final: R$ 180.0
 # ==============================================================================
 
 
@@ -790,30 +791,30 @@
 # ------------------------------------------------------------------------------
 # ✍️ ESCREVA SEU CÓDIGO:
 #
-# def ______________________________________________
-#     ______________________________________________
-#     ______________________________________________
+# def calcular_triplo(numero):
+#     triplo = numero * 3
+#     return triplo
 #
-# resultado = ______________________________________
+# resultado = calcular_triplo(2)
 #
-# print(____________________________________________)
+# print(f"O triplo é: {resultado}")
 #
 # ------------------------------------------------------------------------------
 # 🔄 SEU TESTE DE MESA:
 #
-# - O parâmetro 'numero' recebe: ______
+# - O parâmetro 'numero' recebe: 2
 #
 # - Cálculo realizado:
 #
-#   ______ * 3 = ______
+#   2 * 3 = 6
 #
-# - O return devolve: ______
+# - O return devolve: 6
 #
-# - A variável 'resultado' recebe: ______
+# - A variável 'resultado' recebe: 6
 #
 # 🖥️ SAÍDA:
 #
-# ________________________________________________________________
+# O triplo é: 6
 # ==============================================================================
 
 
