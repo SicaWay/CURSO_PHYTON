@@ -82,3 +82,92 @@
 # # 4. Teste a operação de transferência, enviando um valor do cliente 1 para o cliente 2[cite: 14].
 
 # # 5. Chame a operação de extrato para ambos os clientes e valide se as operações atualizaram os saldos corretamente[cite: 14].
+
+# ===============================================================================
+# EMPRESA JWC TECNOLOGIA - PROCESSO SELETIVO: PROGRAMAÇÃO ORIENTADA A OBJETO (AULA 11)
+# ===============================================================================
+
+class ContaBancaria:
+    def __init__(self, titular, conta, saldo_inicial=0.0):
+        """
+        Método construtor da classe.
+        Inicializa os atributos 'titular', 'conta' e 'saldo'.
+        """
+        self.titular = titular
+        self.conta = conta
+        self.saldo = saldo_inicial
+
+    def depositar(self, valor):
+        """
+        Adiciona o valor fornecido ao saldo da conta.
+        """
+        if valor > 0:
+            self.saldo += valor
+            print(f"Depósito de R$ {valor:.2f} realizado com sucesso na conta de {self.titular}.")
+        else:
+            print("Valor de depósito inválido.")
+
+    def sacar(self, valor):
+        """
+        Realiza o saque caso o saldo seja suficiente.
+        """
+        if valor <= 0:
+            print("Valor de saque inválido.")
+        elif valor <= self.saldo:
+            self.saldo -= valor
+            print(f"Saque de R$ {valor:.2f} realizado com sucesso por {self.titular}.")
+        else:
+            print(f"Saque recusado para {self.titular}: Saldo insuficiente (R$ {self.saldo:.2f}).")
+
+    def extrato(self):
+        """
+        Exibe as informações atuais da conta bancária.
+        """
+        print("\n--- EXTRATO BANCÁRIO ---")
+        print(f"Titular: {self.titular}")
+        print(f"Conta:   {self.conta}")
+        print(f"Saldo:   R$ {self.saldo:.2f}")
+        print("------------------------")
+
+    def transferir(self, valor, conta_destino):
+        """
+        Transfere um valor desta conta para a conta_destino.
+        """
+        if valor <= 0:
+            print("Valor de transferência inválido.")
+        elif valor <= self.saldo:
+            self.saldo -= valor  # Deduz da conta de origem
+            conta_destino.saldo += valor  # Adiciona na conta de destino
+            print(f"Transferência de R$ {valor:.2f} realizada com sucesso de {self.titular} para {conta_destino.titular}.")
+        else:
+            print(f"Transferência recusada para {self.titular}: Saldo insuficiente (R$ {self.saldo:.2f}).")
+
+
+# ===============================================================================
+# ÁREA DE TESTES E VALIDAÇÃO DA ESCALABILIDADE
+# ===============================================================================
+if __name__ == "__main__":
+    print("=== DESAFIO AULA 11: Sistema Bancário (OO) ===")
+
+    # 1. Instanciação dos clientes
+    cliente1 = ContaBancaria(titular="Carlos Silva", conta="1001-X", saldo_inicial=500.0)
+    cliente2 = ContaBancaria(titular="Ana Souza", conta="2002-Y", saldo_inicial=200.0)
+
+    # Exibe os extratos iniciais
+    cliente1.extrato()
+    cliente2.extrato()
+
+    print("\n--- EXECUTANDO OPERAÇÕES ---")
+
+    # 2. Teste de Depósito
+    cliente1.depositar(200.0)
+
+    # 3. Teste de Saque
+    cliente2.sacar(50.0)
+
+    # 4. Teste de Transferência
+    cliente1.transferir(150.0, cliente2)
+
+    # 5. Exibição dos Extratos Finais
+    cliente1.extrato()
+    cliente2.extrato()

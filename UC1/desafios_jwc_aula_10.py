@@ -24,47 +24,52 @@
 
  
 
-def eh_quadrado_magico(matriz):
+def verificar_quadrado_magico(matriz):
     """
     Verifica se uma matriz 3x3 é um Quadrado Mágico.
-    Retorna True se for um Quadrado Mágico, caso contrário False.
+    Retorna True se for um Quadrado Mágico, caso seja o contrário False.
     """
-    # 1. Usar a soma da primeira linha como referência para comparar com o restante
+# 1. Soma da primeira linha como referência para comparar com o restante
     soma_referencia = sum(matriz[0])
 
-    # 2. Verificar a soma de todas as linhas
+# 2. Verificar a soma de todas as linhas
+# Se a soma de qualquer linha for diferente da referência deve interromper a execução e retorna False.
     for linha in matriz:
         if sum(linha) != soma_referencia:
             return False
 
-    # 3. Verificar a soma de todas as colunas
-    for col in range(3):
-        soma_coluna = matriz[0][col] + matriz[1][col] + matriz[2][col]
+# 3. Verificar a soma de todas as colunas 
+# O range(3) gera a sequência 0, 1, 2. 
+# A cada volta do laço, acessa verticalmente os três elementos da coluna atual e verifica a soma.
+    for coluna in range(3):
+        soma_coluna = matriz[0][coluna] + matriz[1][coluna] + matriz[2][coluna]
         if soma_coluna != soma_referencia:
             return False
 
-    # 4. Verificar a soma da diagonal principal
-    soma_diag_principal = matriz[0][0] + matriz[1][1] + matriz[2][2]
-    if soma_diag_principal != soma_referencia:
+# 4. Verificar a soma da diagonal principal
+# Soma os elementos em que os índices de linha e coluna são iguais - [0][0],[1][1] e [2][2]
+    soma_diagonal_principal = matriz[0][0] + matriz[1][1] + matriz[2][2]
+    if soma_diagonal_principal != soma_referencia:
         return False
 
-    # 5. Verificar a soma da diagonal secundária
-    soma_diag_secundaria = matriz[0][2] + matriz[1][1] + matriz[2][0]
-    if soma_diag_secundaria != soma_referencia:
+# 5. Verificar a soma da diagonal secundária
+# Soma os elementos que cruzam a matriz no sentido oposto - topo direito ao fundo esquerdo
+    soma_diagonal_secundaria = matriz[0][2] + matriz[1][1] + matriz[2][0]
+    if soma_diagonal_secundaria != soma_referencia:
         return False
 
-    # Se passou por todas as validações, é um Quadrado Mágico
+# Se passou por todas as validações, é um Quadrado Mágico
     return True
 
-
-def exibir_matriz(matriz):
+# Responsavel por mostrar os dados no terminal
+def exibir_matriz(matriz): # Percorre cada linha da matriz e exibe os elementos de forma organizada
     """Exibe a matriz 3x3 formatada de forma visual organizada."""
     print("\n--- MATRIZ INSERIDA ---")
     for linha in matriz:
-        print(f"[ {linha[0]:^3} {linha[1]:^3} {linha[2]:^3} ]")
+        print(f"[ {linha[0]:^3} {linha[1]:^3} {linha[2]:^3} ]") # linha[0]:^3: O especificador de formatação, :^3, centraliza o valor dentro de um espaço de 3 caracteres.
     print("-----------------------")
 
-
+# Responsavel por executar o programa principal
 def main():
     print("=== VALIDADOR DE QUADRADO MÁGICO 3x3 ===")
     matriz = []
@@ -74,15 +79,15 @@ def main():
         linha = []
         print(f"\nDigite os elementos da Linha {i + 1}:")
         for j in range(3):
-            num = int(input(f"  Elemento [{i + 1}][{j + 1}]: "))
-            linha.append(num)
+            numero = int(input(f"  Elemento [{i + 1}][{j + 1}]: "))
+            linha.append(numero)
         matriz.append(linha)
 
     # Exibição da matriz
     exibir_matriz(matriz)
 
     # Validação e exibição do resultado final
-    if eh_quadrado_magico(matriz):
+    if verificar_quadrado_magico(matriz):
         print("RESULTADO: A matriz É um Quadrado Mágico! ")
     else:
         print("RESULTADO: A matriz NÃO É um Quadrado Mágico.")
